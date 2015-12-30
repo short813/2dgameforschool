@@ -1,0 +1,65 @@
+Initialize engine version: 5.2.0f3 (e7947df39b5c)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 5600 (ID=0x1612)
+    Vendor:   Intel
+    VRAM:     128 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\3d game dev\pikachus_magical_journey\Pikachu's_magical_journey_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\3d game dev\pikachus_magical_journey\Pikachu's_magical_journey_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\3d game dev\pikachus_magical_journey\Pikachu's_magical_journey_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\3d game dev\pikachus_magical_journey\Pikachu's_magical_journey_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\3d game dev\pikachus_magical_journey\Pikachu's_magical_journey_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\3d game dev\pikachus_magical_journey\Pikachu's_magical_journey_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\3d game dev\pikachus_magical_journey\Pikachu's_magical_journey_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\3d game dev\pikachus_magical_journey\Pikachu's_magical_journey_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\3d game dev\pikachus_magical_journey\Pikachu's_magical_journey_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\3d game dev\pikachus_magical_journey\Pikachu's_magical_journey_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\3d game dev\pikachus_magical_journey\Pikachu's_magical_journey_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\3d game dev\pikachus_magical_journey\Pikachu's_magical_journey_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\3d game dev\pikachus_magical_journey\Pikachu's_magical_journey_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.328 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: D:\3d game dev\pikachus_magical_journey\Pikachu's_magical_journey_Data\Managed\System.dll (this message is harmless)
+NullReferenceException: Object reference not set to an instance of an object
+  at Menu_script.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 870 -> priority: 1 
+  Thread -> id: 3c0 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.278776 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 278.
+Total: 0.650795 ms (FindLiveObjects: 0.058921 ms CreateObjectMapping: 0.038774 ms MarkObjects: 0.520788 ms  DeleteObjects: 0.028130 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.885720 ms
+
+Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 333.
+Total: 0.593014 ms (FindLiveObjects: 0.036493 ms CreateObjectMapping: 0.032311 ms MarkObjects: 0.456545 ms  DeleteObjects: 0.065003 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.844285 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 333.
+Total: 0.493798 ms (FindLiveObjects: 0.041815 ms CreateObjectMapping: 0.030791 ms MarkObjects: 0.410548 ms  DeleteObjects: 0.007602 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.920312 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 333.
+Total: 0.507863 ms (FindLiveObjects: 0.056260 ms CreateObjectMapping: 0.031171 ms MarkObjects: 0.409408 ms  DeleteObjects: 0.007982 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.824518 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 333.
+Total: 0.543976 ms (FindLiveObjects: 0.069945 ms CreateObjectMapping: 0.030791 ms MarkObjects: 0.432216 ms  DeleteObjects: 0.007602 ms)
+

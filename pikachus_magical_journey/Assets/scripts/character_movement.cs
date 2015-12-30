@@ -1,0 +1,115 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class character_movement : MonoBehaviour
+{
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        body = GetComponent<Rigidbody2D>();
+        cheese_start = 61;
+
+    }
+    //checks to see whether jumping or not
+    Rigidbody2D body;
+    public Transform Ground_CheckTransform;
+    public bool grounded = false;
+    public LayerMask Ground_CheckLayerMask;
+    Animator animator;
+    public bool dead = false;
+    // variable for collection
+    private uint Cheese= 0;
+    public Texture2D CheeseIconTexture;
+    public GUIStyle restartButtonStyle;
+    public AudioClip CheeseCollectSound;
+    public AudioSource footstepsAudio;
+    public float jumpForce = 500;
+    public float maxspeed;
+    public float xxxMovementxxx;
+    public float CheeseToNext = 36;
+    public float cheese_start;
+    
+
+
+    void DisplayRestartButton()
+    {
+        if(dead && grounded)
+        {
+            Rect buttonRect = new Rect(Screen.width * 0.35f, Screen.height * 0.45f, Screen.width * 0.30f, Screen.height * 0.1f);
+            if (GUI.Button(buttonRect, " Try Again?"))
+                Application.LoadLevel(Application.loadedLevelName);
+
+        }
+    }
+    void DisplayCheeseCount()
+    {
+        // icon of object collect
+        Rect CheeseIconRect = new Rect(10, 10, 32, 32);
+        GUI.DrawTexture(CheeseIconRect, CheeseIconTexture);
+        // object counter
+        GUIStyle style = new GUIStyle();
+        style.fontSize = 30;
+        style.fontStyle = FontStyle.Bold;
+        style.normal.textColor = Color.red;
+        Rect labelRect = new Rect(CheeseIconRect.xMax, CheeseIconRect.y, 60, 32);
+        GUI.Label(labelRect, Cheese.ToString(), style);
+    }
+void OnGUI()
+    {
+            DisplayCheeseCount();
+            DisplayRestartButton();
+    }
+void CollectCheese(Collider2D CheeseCollider)
+    {
+        Cheese++;
+        Destroy(CheeseCollider.gameObject);
+        AudioSource.PlayClipAtPoint(CheeseCollectSound, transform.position);
+        
+        
+    }
+void OnTriggerEnter2D(Collider2D collider)
+    {
+        //collection trigger
+        if (collider.gameObject.CompareTag("Cheese"))
+            CollectCheese(collider);
+        // death trigger
+        else DeathByPidgey(collider);
+    }
+
+void DeathByPidgey(Collider2D pidgeyCollider)
+    {
+        dead = true;
+        animator.SetBool("dead", true);
+    }
+    void UpdateGroundedStatus()
+    {
+        //checks to see if it is grounded
+        grounded = Physics2D.OverlapCircle(Ground_CheckTransform.position, 0.1f, Ground_CheckLayerMask);
+        animator.SetBool("grounded", grounded);
+    }
+    void Update()
+    {
+        // jump control
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        {
+            body.AddForce(new Vector2(0.0f, jumpForce));
+        }
+        // when you reach 25 cheese it will load the next level
+        if ((cheese_start - Cheese) == CheeseToNext)
+            {
+            Application.LoadLevel(2);
+        }
+    }
+
+    void FixedUpdate()
+    {
+        xxxMovementxxx = Input.GetAxis("Horizontal");
+        // get velcoity from getAxis
+        if (grounded && !dead)
+        {
+            body.velocity = new Vector2(xxxMovementxxx * maxspeed, body.velocity.y);
+        }
+        animator.SetFloat("speed", xxxMovementxxx);
+        UpdateGroundedStatus();
+    }
+}

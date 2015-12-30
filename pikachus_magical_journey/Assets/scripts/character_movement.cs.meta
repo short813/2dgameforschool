@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ea58bfa9c3e7fed44a80f30929507afa
+timeCreated: 1445998516
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Ground_CheckTransform: {instanceID: 0}
+  - cheeseIconTexture: {fileID: 2800000, guid: 8dcc7ed19c8af2a409f145eaec5651c8, type: 3}
+  - cheeseCollectSound: {instanceID: 0}
+  - footstepsAudio: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
